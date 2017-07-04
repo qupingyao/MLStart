@@ -69,7 +69,7 @@ def classifyPerson():
     iceCream = float(raw_input("liters of ice cream consumed per year?"))
     datingDataMat, datingLabels = file2matrix('datingTestSet2.txt')
     normMat, ranges, minVals = autoNorm(datingDataMat)
-    inArr = array([percentTats,ffMiles,iceCream])
+    inArr = array([ffMiles,percentTats,iceCream])
     classifierResult = classify0((inArr-minVals)/ranges, normMat, datingLabels, 3)
     print "You Will probably like this person: ",resultList[classifierResult-1]
 
