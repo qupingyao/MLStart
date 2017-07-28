@@ -78,7 +78,7 @@ def stocGradAscent1(dataMatrix,classLabels,numIter = 150):
             del(dataIndex[randIndex])
     return weights
 
-#数字识别KNN实例
+#预测病马死亡实例
 def classifyVector(inX,weights):
     prob = sigmoid(sum(inX*weights))
     if prob > 0.5:
@@ -175,7 +175,6 @@ def newColicTest():
     errorCount = 0
     numTestVec = 0.0
     for line in frTest.readlines():
-        numTestVec += 1.0
         currLine = line.strip().split('\t')
         for i in range(21):
             if float(currLine[i])!=0.0:
